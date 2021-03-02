@@ -5,7 +5,7 @@ function CupertinoButtonInfo(props) {
   return (
     <TouchableOpacity style={[styles.container, props.style]}
     onPress={props.onPress}>
-      <Text style={styles.caption}>{props.caption}</Text>
+      <Text style={styles.caption}>Entra a tu cita virtual</Text>
     </TouchableOpacity>
   );
 }

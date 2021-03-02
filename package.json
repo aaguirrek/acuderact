@@ -9,7 +9,6 @@
     "test": "jest",
     "lint": "eslint .",
     "build:ios": "react-native bundle --entry-file='index.js' --bundle-output='./ios/main.jsbundle' --dev=false --platform='ios'"
-
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",

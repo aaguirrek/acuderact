@@ -10,7 +10,7 @@ const SynoNavigator = createStackNavigator(
     },
     {
         headerShown:false,
-        initialRouteName: 'syno',
+        initialRouteName: 'home',
         defaultNavigationOptions: {headerShown:false}
         
     })

@@ -1,21 +1,23 @@
 import { StyleSheet} from "react-native"
+import { Dimensions } from 'react-native';
+const win = Dimensions.get('window');
 export default  StyleSheet.create({
         container: {
             flex: 1
         },
         scrollArea: {
-            width: 375,
-            height: 724,
+            width:win.width,
+            height: win.height,
             marginTop: -40
         },
         scrollArea_contentContainerStyle: {
-            height: 724,
-            width: 375
+            height: win.height,
+            width:win.width
         },
         rect: {
             top: 0,
             left: 0,
-            width: 375,
+            width: win.width,
             height: 280,
             position: "absolute",
             backgroundColor: "rgba(24,221,208,1)",
@@ -26,11 +28,11 @@ export default  StyleSheet.create({
             width: 175,
             height: 110,
             marginTop: 120,
-            marginLeft: 108
+            marginLeft: win.width/2 - 87.5
         },
         rect2: {
             top: 260,
-            left: 34,
+            left: win.width/2 - 155,
             width: 306,
             height: 40,
             position: "absolute",
@@ -46,14 +48,12 @@ export default  StyleSheet.create({
             shadowRadius: 10
         },
         consultorioVirtual: {
-            fontFamily: "roboto-regular",
             color: "rgba(152,93,183,1)",
             textAlign: "center",
-            marginTop: 12,
-            marginLeft: 99
+            marginTop: 12
         },
         rectStack: {
-            width: 375,
+            width: window.width,
             height: 300
         },
         image2: {
@@ -63,21 +63,22 @@ export default  StyleSheet.create({
             marginLeft: 68
         },
         textInput: {
-            fontFamily: "roboto-regular",
             color: "#121212",
             height: 45,
-            width: 301,
+            width: 306,
             backgroundColor: "rgba(230, 230, 230,1)",
-            textAlign: "center",
+            textAlign: "center", 
             borderRadius: 100,
             marginTop: 50,
+            marginVertical:60,
             alignSelf: "center"
+            
         },
         cupertinoButtonInfo: {
-            height: 44,
-            width: 301,
-            marginTop: 25,
-            marginLeft: 37,
+            marginTop: 50,
+            marginVertical:50,
+            width: 306,
+            marginLeft:  win.width/2 - 205,
             alignSelf: "center"
         }
     });

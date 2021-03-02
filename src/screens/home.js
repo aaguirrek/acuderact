@@ -1,6 +1,5 @@
 import React, { Component } from "react"
-import { StyleSheet, View, Image, TextInput, Text } from "react-native"
-import CupertinoButtonInfo from "../components/CupertinoButtonInfo"
+import {  ScrollView, Button, View, Image, TextInput, Text } from "react-native"
 import styles from "./styles"
 class Home extends Component{
   constructor(props){
@@ -31,7 +30,7 @@ class Home extends Component{
           <View style={styles.rectStack}>
             <View style={styles.rect}>
               <Image
-                source={require("../assets/images/logo_blanco@4x.png")}
+                source={require("./logo_blanco.png")}
                 resizeMode="contain"
                 style={styles.image}
               ></Image>
@@ -41,7 +40,7 @@ class Home extends Component{
             </View>
           </View>
           <Image
-            source={require("../assets/images/landing@4x.png")}
+            source={require("./landing.png")}
             resizeMode="contain"
             style={styles.image2}
           ></Image>
@@ -51,11 +50,14 @@ class Home extends Component{
             blurOnSubmit={true}
             textBreakStrategy="highQuality"
             style={styles.textInput}
+            onChangeText={this.onMeetingChange}
           ></TextInput>
-          <CupertinoButtonInfo
-            entrar="Ingresa la cita en línea"
+
+          <Button
             style={styles.cupertinoButtonInfo}
-          ></CupertinoButtonInfo>
+            title="Ingresa la cita en línea"
+            onPress={this.startMeet}
+          />
         </ScrollView>
       </View>
     </View>

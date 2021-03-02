@@ -32,7 +32,7 @@ class VideoCall extends React.Component {
     }
     startJitsi=()=>{
         const { room } = this.props.navigation.state.params
-        url = "https://meeting.syno.live/"+room
+        url = "https://conference.acudeapp.com/"+room
         setTimeout(() => {
             console.log(url)
             const   userInfo = { displayName: 'Paciente'}
@@ -48,6 +48,6 @@ class VideoCall extends React.Component {
             </View>
     );
   }
-}
+} 
 
 export default VideoCall;
